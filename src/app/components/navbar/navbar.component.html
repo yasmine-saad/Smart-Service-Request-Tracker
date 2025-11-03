@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="burger" (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <div class="title">{{ title }}</div>
+
+  <ul class="nav-links" [class.open]="isMenuOpen">
+    <li><a (click)="navigateTo('/request-service')">Home</a></li>
+    <li><a (click)="navigateTo('/request-follow-up')">Contact Us</a></li>
+  </ul>
+</nav>

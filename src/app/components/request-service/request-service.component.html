@@ -1,0 +1,21 @@
+<!-- request-service.component.html -->
+<div class="request-service-container">
+  <!-- Enable map with editable pin -->
+  <app-map [readOnly]="false" (locationSelected)="onLocationSelected($event)"></app-map>
+
+  <div class="controls">
+    <button class="btn-select" (click)="onSelectServiceClick()" [disabled]="!selectedCoordinates">
+      Select Service
+    </button>
+  </div>
+
+  <div class="service-menu" *ngIf="showServiceMenu">
+    <p>Select a service in your area:</p>
+    <ul>
+      <li *ngFor="let service of services" (click)="onServiceSelected(service)">
+        {{ service }}
+      </li>
+    </ul>
+  </div>
+</div>
+

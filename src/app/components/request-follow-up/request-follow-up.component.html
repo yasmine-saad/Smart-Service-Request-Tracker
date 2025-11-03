@@ -1,0 +1,29 @@
+<!-- request-follow-up.component.html -->
+<app-map [readOnly]="true" [location]="customerLocation"></app-map>
+
+<app-navbar title="Request Follow Up"></app-navbar>
+<div class="follow-up-container">
+  <div class="provider-info">
+    <h2>Service: {{ serviceName }}</h2>
+    <p><strong>Provider:</strong> {{ serviceProvider.name }}</p>
+    <p><strong>Phone:</strong> {{ serviceProvider.phone }}</p>
+    <p><strong>Rating:</strong> {{ serviceProvider.rating }} / 5</p>
+    <button (click)="cancelRequest()">Cancel Request</button>
+  </div>
+
+  <div class="status-bar">
+    <div [class.active]="requestStatus === 'pending'">Pending</div>
+    <div [class.active]="requestStatus === 'onTheWay'">On the Way</div>
+    <div [class.active]="requestStatus === 'working'">Working</div>
+    <div [class.active]="requestStatus === 'completed'">Completed</div>
+  </div>
+
+  <div *ngIf="requestStatus === 'onTheWay'" class="tracking-map">
+    <app-map [readOnly]="true" [location]="customerLocation"></app-map>
+  </div>
+</div>
+
+<!-- TypeScript logic moved to the .ts file -->
+
+<!-- Ensure Leaflet is installed and imported -->
+
