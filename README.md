@@ -57,3 +57,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Smart-Service-Request-Tracker
+
+A modern Angular 19 application for managing and tracking service requests in real time. It allows users to select a location on an interactive map, choose a service, and follow up on the service status through a dynamic dashboard. Built with Angular Material, Leaflet Maps, and RxJS for a responsive and scalable experience.
