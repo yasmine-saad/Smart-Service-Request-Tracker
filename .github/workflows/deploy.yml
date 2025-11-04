@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Build
-      run: npm run build -- --base-href="/Smart-Service-Request-Tracker/"
+      run: npm run build -- --configuration production --base-href="/Smart-Service-Request-Tracker/"
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
