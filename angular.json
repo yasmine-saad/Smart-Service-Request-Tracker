@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/smart-service-request-tracker",
+            "baseHref": "/Smart-Service-Request-Tracker/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -88,7 +89,7 @@
               }
             ],
 
-  
+
 
           "styles": [
             "node_modules/leaflet/dist/leaflet.css",
